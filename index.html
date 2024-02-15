@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Architecture</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.10.1/mapbox-gl.js"></script>
+
+    <script type="module" src="js/main.js"></script>
+
+    <script src="js/bar_controller.js"></script>
+
+
+</head>
+
+<body>
+
+    <div id="container">
+        
+        <div id="map"></div>
+        
+        <div id="popup">
+            <p id="popup_mmsi" class="popup_text"> mmsi : </p>
+            <p id="popup_imo" class="popup_text"> imo : </p>
+            <p id="popup_name" class="popup_text"> name : </p>
+            <p id="popup_lat" class="popup_text"> latitude : </p>
+            <p id="popup_lon" class="popup_text"> longitude : </p>
+            <p id="popup_speed" class="popup_text"> speed : </p>
+            <p id="popup_heading" class="popup_text"> heading : </p>
+            <p id="popup_type" class="popup_text"> type : </p>
+        </div>
+
+
+        <div id="filter_bar" class="sliding_bar">
+            <div id="logo" ></div>
+            <div id="filter">
+                <p id="filter_text" > Welcome! Enter the vessel identifier! </p>
+                <div id="filter_setting">
+                    <input id="filter_input" type="text">
+                    <div id="filter_radio" >
+                        <div class="radio_op">
+                            <input type="radio" name="id_vessel" id="mmsi_op" class="radio_button" checked="checked">
+                            <label for="mmsi_op" class="radio_text" > mmsi </label><br>
+                        </div>
+                        <div class="radio_op">
+                            <input type="radio" name="id_vessel" id="imo_op"  class="radio_button" >
+                            <label for="imo_op" class="radio_text" > imo </label><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+
+</body>
+</html>
