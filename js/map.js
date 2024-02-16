@@ -68,13 +68,13 @@ class Map {
 
         // Show the popup when the cursor is over the marker
         markerIcon.addEventListener('mouseenter', () => {
-            popup.style.display = 'block';
+            popup.style.opacity = 100;
             updatePopupPosition();
         });
 
         // Hide the popup when the cursor is over the marker
         markerIcon.addEventListener('mouseleave', () => {
-            popup.style.display = 'none';
+            popup.style.opacity = 0;
         });
     }
 }
